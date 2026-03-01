@@ -28,3 +28,4 @@
 | metrics/ | 指标目录 | 能力评分与周期复盘。 |
 | automation/ | 自动化目录 | 任务提示词与 cron 配置模板。 |
 | skills/ | 技能目录 | OpenClaw 可复用技能清单与维护说明。 |
+| scripts/ | 执行脚本目录 | runbook 场景的一键执行脚本与脚本索引。 |

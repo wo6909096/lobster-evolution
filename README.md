@@ -114,6 +114,8 @@ automation/
   CRON_JOBS.md
 skills/
   OPENCLAW_SKILLS.md
+scripts/
+  skill_flows/ # one-click wrappers for runbook scenarios
 ```
 
 ## Quick start (OpenClaw)
@@ -153,6 +155,8 @@ This repository ships with an operational skill stack for OpenClaw governance wo
 
 - Skill catalog: [`skills/OPENCLAW_SKILLS.md`](./skills/OPENCLAW_SKILLS.md)
 - Skill index: [`skills/INDEX.md`](./skills/INDEX.md)
+- Skill runbook: [`skills/SKILL_RUNBOOK.md`](./skills/SKILL_RUNBOOK.md)
+- One-click flow scripts: [`scripts/skill_flows/INDEX.md`](./scripts/skill_flows/INDEX.md)
 
 These skills are installed under local OpenClaw managed path `~/.openclaw/skills/` and cover:
 - doc sync

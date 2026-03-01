@@ -7,6 +7,7 @@
 技能目录（本机）：`~/.openclaw/skills/`
 
 组合执行手册：[`SKILL_RUNBOOK.md`](./SKILL_RUNBOOK.md)
+仓库一键脚本：[`../scripts/skill_flows/INDEX.md`](../scripts/skill_flows/INDEX.md)
 
 ## 已安装技能
 

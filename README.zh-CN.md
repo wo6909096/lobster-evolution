@@ -115,6 +115,8 @@ automation/
   CRON_JOBS.md
 skills/
   OPENCLAW_SKILLS.md
+scripts/
+  skill_flows/ # runbook 场景的一键执行脚本
 ```
 
 ## 快速开始（OpenClaw 接入）
@@ -152,6 +154,8 @@ openclaw config get agents.defaults.workspace --json
 
 - 技能清单：[`skills/OPENCLAW_SKILLS.md`](./skills/OPENCLAW_SKILLS.md)
 - 技能索引：[`skills/INDEX.md`](./skills/INDEX.md)
+- 组合手册：[`skills/SKILL_RUNBOOK.md`](./skills/SKILL_RUNBOOK.md)
+- 一键脚本：[`scripts/skill_flows/INDEX.md`](./scripts/skill_flows/INDEX.md)
 
 技能安装在本机 `~/.openclaw/skills/`，覆盖以下场景：
 - 文档联动同步

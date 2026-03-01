@@ -4,6 +4,7 @@
 # SKILL_RUNBOOK
 
 按高频场景给出“技能组合 -> 执行顺序 -> 命令模板”。
+仓库内一键脚本入口：`scripts/skill_flows/`。
 
 ## 场景 A：执行任务防空转（先做再汇报）
 
@@ -26,6 +27,15 @@ bash ~/.openclaw/skills/execution-receipt-enforcer/scripts/receipt_lint.sh \
   --mode success --file /tmp/reply.md
 ```
 
+一键脚本：
+
+```bash
+bash scripts/skill_flows/scene_a_execute_with_receipt.sh \
+  --reply-file /tmp/reply.md \
+  --mode success \
+  --domain-cmd "git status -sb"
+```
+
 ## 场景 B：仓库改动后做文档联动同步
 
 目标：确保 header、目录索引、根文档同步。
@@ -45,6 +55,12 @@ bash ~/.openclaw/skills/execution-receipt-enforcer/scripts/receipt_lint.sh \
 bash ~/.openclaw/skills/doc-sync-guard/scripts/check_sync.sh ~/lobster-evolution
 bash ~/.openclaw/skills/governance-sync-maintainer/scripts/check_governance_sync.sh \
   --repo ~/lobster-evolution
+```
+
+一键脚本：
+
+```bash
+bash scripts/skill_flows/scene_b_doc_sync.sh --repo ~/lobster-evolution
 ```
 
 ## 场景 C：把重复任务升级为能力实验
@@ -74,6 +90,16 @@ bash ~/.openclaw/skills/l2-experiment-driver/scripts/new_experiment.sh \
 # 2) 生成周复盘草稿（先预览）
 bash ~/.openclaw/skills/weekly-evolution-review/scripts/weekly_review_pack.sh \
   --repo ~/lobster-evolution --dry-run
+```
+
+一键脚本：
+
+```bash
+bash scripts/skill_flows/scene_c_experiment_bootstrap.sh \
+  --repo ~/lobster-evolution \
+  --capability CAP-dev-log-triage \
+  --domain dev \
+  --hypothesis "Structured triage improves throughput"
 ```
 
 ## 场景 D：周评审与指标更新
@@ -111,6 +137,23 @@ bash ~/.openclaw/skills/weekly-evolution-review/scripts/append_scoreboard_row.sh
   --dry-run
 ```
 
+一键脚本：
+
+```bash
+bash scripts/skill_flows/scene_d_weekly_review.sh \
+  --repo ~/lobster-evolution \
+  --date 2026-03-01 \
+  --domain dev \
+  --capability CAP-dev-log-triage \
+  --success-rate 0.84 \
+  --avg-steps 7 \
+  --avg-duration-sec 420 \
+  --tool-cost 1.8 \
+  --reuse-rate 0.62 \
+  --decision Hold \
+  --dry-run
+```
+
 ## 场景 E：cron 任务异常排查
 
 目标：快速定位“任务跑了但没送达”。
@@ -130,6 +173,14 @@ bash ~/.openclaw/skills/weekly-evolution-review/scripts/append_scoreboard_row.sh
 bash ~/.openclaw/skills/cron-ops-hardening/scripts/channel_probe.sh
 bash ~/.openclaw/skills/cron-ops-hardening/scripts/cron_diagnose.sh \
   --id <job-id> --limit 5
+```
+
+一键脚本：
+
+```bash
+bash scripts/skill_flows/scene_e_cron_diagnose.sh \
+  --id <job-id> \
+  --limit 5
 ```
 
 ## 场景 F：事故/回滚后审计闭环
@@ -158,4 +209,15 @@ bash ~/.openclaw/skills/audit-log-writer/scripts/new_incident_report.sh \
 
 bash ~/.openclaw/skills/audit-log-writer/scripts/audit_lint.sh \
   --file /tmp/incident.md --mode incident
+```
+
+一键脚本：
+
+```bash
+bash scripts/skill_flows/scene_f_incident_close_loop.sh \
+  --repo ~/lobster-evolution \
+  --slug gateway-token-mismatch \
+  --stable-ref a1b2c3d \
+  --hypothesis "token route change caused delivery regression" \
+  --trigger "delivery failed > 10%"
 ```
