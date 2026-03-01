@@ -112,6 +112,8 @@ metrics/
 automation/
   TASK_PROMPTS.md
   CRON_JOBS.md
+skills/
+  OPENCLAW_SKILLS.md
 ```
 
 ## Quick start (OpenClaw)
@@ -144,6 +146,22 @@ For execution requests ("do it", "start now", "land this"), the agent must:
 Suggested task prompt templates:
 
 - [`automation/TASK_PROMPTS.md`](./automation/TASK_PROMPTS.md)
+
+## Skill stack
+
+This repository ships with an operational skill stack for OpenClaw governance workflows.
+
+- Skill catalog: [`skills/OPENCLAW_SKILLS.md`](./skills/OPENCLAW_SKILLS.md)
+- Skill index: [`skills/INDEX.md`](./skills/INDEX.md)
+
+These skills are installed under local OpenClaw managed path `~/.openclaw/skills/` and cover:
+- doc sync
+- execution receipt enforcement
+- L2 experiment drafting
+- weekly review packaging
+- cron diagnostics
+- audit log writing
+- governance cross-layer sync checks
 
 ## Proactive evolution loop
 

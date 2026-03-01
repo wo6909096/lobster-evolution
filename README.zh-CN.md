@@ -113,6 +113,8 @@ metrics/
 automation/
   TASK_PROMPTS.md
   CRON_JOBS.md
+skills/
+  OPENCLAW_SKILLS.md
 ```
 
 ## 快速开始（OpenClaw 接入）
@@ -143,6 +145,22 @@ openclaw config get agents.defaults.workspace --json
 推荐任务模板：
 
 - [`automation/TASK_PROMPTS.md`](./automation/TASK_PROMPTS.md)
+
+## 技能栈（Skill Stack）
+
+本仓库配套了一组 OpenClaw 治理技能，用于把规则直接转成可执行流程。
+
+- 技能清单：[`skills/OPENCLAW_SKILLS.md`](./skills/OPENCLAW_SKILLS.md)
+- 技能索引：[`skills/INDEX.md`](./skills/INDEX.md)
+
+技能安装在本机 `~/.openclaw/skills/`，覆盖以下场景：
+- 文档联动同步
+- 执行回执约束
+- L2 实验草拟
+- 周复盘打包
+- cron 运维排障
+- 审计日志生成
+- 治理跨层一致性检查
 
 ## 主动进化闭环
 
