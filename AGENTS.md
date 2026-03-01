@@ -14,6 +14,8 @@ Before doing anything else:
 2. Read `USER.md` — this is who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+5. In this repo, read `governance/L0/EXECUTION_RECEIPT_POLICY.md`
+6. In this repo, read `governance/L1/PROACTIVE_LOOP.md`
 
 Don't ask permission. Just do it.
 
@@ -51,6 +53,26 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - Don't run destructive commands without asking.
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
+
+## Execution Contract (Lobster Evolution)
+
+When a human asks for execution ("do it", "start now", "land this"):
+
+1. Run at least one concrete tool/command before any progress update.
+2. Never send status-only placeholders like:
+   - "开始了"
+   - "执行中"
+   - "马上给你结果"
+3. Always return an execution receipt:
+   - files changed
+   - `git status -sb`
+   - commit hash (if committed)
+   - push result (if requested)
+4. If blocked, return a failure receipt:
+   - exact command attempted
+   - exact error
+   - next fix attempt
+5. Write a short change note to `audits/change_logs/YYYY-MM-DD.md` for non-trivial work.
 
 ## External vs Internal
 
