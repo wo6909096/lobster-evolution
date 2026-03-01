@@ -1,5 +1,10 @@
 # CHANGELOG_EVOLUTION
 
+## v1.2.0 - readme-expanded
+- 新增详细英文 README（项目目标、分层、接入、自动化、排查）
+- 新增完整中文 README（README.zh-CN.md）
+- 增加双语文档互链，降低上手成本
+
 ## v1.1.0 - execution-hardening
 - 增加 L0 执行回执规范（禁止口号式空转）
 - 增加 L1 主动进化循环文档
