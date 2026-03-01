@@ -221,3 +221,30 @@ bash scripts/skill_flows/scene_f_incident_close_loop.sh \
   --hypothesis "token route change caused delivery regression" \
   --trigger "delivery failed > 10%"
 ```
+
+## 场景 G：飞书“只回复不执行”热修复
+
+目标：定位 reply-only 风险，并在必要时切换回退模型。
+
+组合技能：
+- `execution-receipt-enforcer`
+- `cron-ops-hardening`（复用通道探针）
+
+顺序：
+1. 检查通道健康与当前模型
+2. 统计最近会话中的 `toolUse` 与承诺话术命中
+3. 如命中高风险，切换回退模型并重启网关
+
+命令模板：
+
+```bash
+# 1) 仅诊断
+bash scripts/skill_flows/scene_g_reply_only_hotfix.sh --window 180
+
+# 2) 诊断后立即回退模型（按需）
+bash scripts/skill_flows/scene_g_reply_only_hotfix.sh \
+  --window 180 \
+  --apply-model-switch \
+  --fallback-model sub2api/gpt-5.2-codex \
+  --restart-gateway
+```

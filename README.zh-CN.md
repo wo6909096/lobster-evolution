@@ -271,3 +271,19 @@ rg -n 'toolCall|toolResult|stopReason":"toolUse"' ~/.openclaw/agents/main/sessio
 ```
 
 如果没有 `toolUse`，通常代表并未实际执行。
+
+可直接运行一键热修复诊断（含通道/模型检查与承诺话术识别）：
+
+```bash
+bash scripts/skill_flows/scene_g_reply_only_hotfix.sh --window 180
+```
+
+若确认是 reply-only 风险且需要立即回退模型：
+
+```bash
+bash scripts/skill_flows/scene_g_reply_only_hotfix.sh \
+  --window 180 \
+  --apply-model-switch \
+  --fallback-model sub2api/gpt-5.2-codex \
+  --restart-gateway
+```

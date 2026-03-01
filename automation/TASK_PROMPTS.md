@@ -75,3 +75,32 @@ bash scripts/skill_flows/scene_d_weekly_review.sh \
   --decision Hold \
   --dry-run
 ```
+
+## 模板 4：飞书“只回复不执行”热修复
+
+适用：飞书会话中出现“开始了/一分钟后回复”等承诺，但没有执行证据。
+
+先运行诊断脚本：
+
+```bash
+bash scripts/skill_flows/scene_g_reply_only_hotfix.sh \
+  --window 180
+```
+
+若确认是模型早停并需要临时回退：
+
+```bash
+bash scripts/skill_flows/scene_g_reply_only_hotfix.sh \
+  --window 180 \
+  --apply-model-switch \
+  --fallback-model sub2api/gpt-5.2-codex \
+  --restart-gateway
+```
+
+随后在飞书发送（强制执行回执）：
+
+```text
+执行模式：先执行后回复。在 /Users/liyuanyuan/lobster-evolution 运行 `git status -sb` 与 `git log --oneline -5`。
+回复必须包含：命令输出摘要 + 可验证证据；若失败仅返回失败回执（失败命令、原始错误、下一步）。
+禁止“开始了/执行中/一分钟后回复”。
+```

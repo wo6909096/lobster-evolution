@@ -18,3 +18,4 @@
 | scene_d_weekly_review.sh | 场景 D | 产出周评审、追加记分板并写入 change log。 |
 | scene_e_cron_diagnose.sh | 场景 E | 执行 cron/通道排障并可选进行回执质量校验。 |
 | scene_f_incident_close_loop.sh | 场景 F | 事故草稿、审计校验、change log 与文档联动闭环。 |
+| scene_g_reply_only_hotfix.sh | 场景 G | 诊断“只回复不执行”并可选切换回退模型。 |

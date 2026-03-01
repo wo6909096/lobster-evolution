@@ -269,3 +269,19 @@ rg -n 'toolCall|toolResult|stopReason":"toolUse"' ~/.openclaw/agents/main/sessio
 ```
 
 No `toolUse` usually means no concrete execution.
+
+Use one-click hotfix diagnosis (includes channel/model checks and promise-text detection):
+
+```bash
+bash scripts/skill_flows/scene_g_reply_only_hotfix.sh --window 180
+```
+
+If the diagnosis confirms reply-only risk and you need model fallback immediately:
+
+```bash
+bash scripts/skill_flows/scene_g_reply_only_hotfix.sh \
+  --window 180 \
+  --apply-model-switch \
+  --fallback-model sub2api/gpt-5.2-codex \
+  --restart-gateway
+```

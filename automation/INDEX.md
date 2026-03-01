@@ -11,5 +11,5 @@
 | 名称 | 地位 | 功能 |
 | --- | --- | --- |
 | INDEX.md | 目录索引 | automation 导航与职责说明。 |
-| TASK_PROMPTS.md | 执行模板 | 防空转任务提示词（执行/修复/周复盘）。 |
+| TASK_PROMPTS.md | 执行模板 | 防空转任务提示词（执行/修复/周复盘/飞书热修复）。 |
 | CRON_JOBS.md | 调度模板 | heartbeat + cron 的最小自动化方案。 |
