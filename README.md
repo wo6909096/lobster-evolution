@@ -1,8 +1,25 @@
+<!-- input: 来自上级任务、所属目录 INDEX、相关治理文件 -->
+<!-- output: 产出本文件定义的规则/模板/记录/说明 -->
+<!-- pos: README.md；若所属文件夹变化请更新我；若文件更新必须同步更新我的开头注释和所属文件夹的MD。 -->
 # lobster-evolution
 
 Execution-first governance and evolution framework for OpenClaw agents.
 
 For Chinese documentation, see [README.zh-CN.md](./README.zh-CN.md).
+
+## Documentation synchronization contract
+
+This repository uses a self-referential, multi-level index system.
+After any feature, architecture, or writing update, you must synchronously update:
+
+1. The file's own 3-line header (`input` / `output` / `pos`)
+2. The `INDEX.md` in the file's folder
+3. Relevant parent indexes (including root [`INDEX.md`](./INDEX.md) when needed)
+4. Root docs when project-level semantics change (at least [`README.md`](./README.md))
+
+Rule source:
+
+- [`governance/L0/DOC_SYNC_POLICY.md`](./governance/L0/DOC_SYNC_POLICY.md)
 
 ## Why this repo exists
 
@@ -31,6 +48,7 @@ Base constraints that must always hold:
 - Rollback policy
 - Commit conventions
 - Execution receipt contract (anti-empty-progress policy)
+- Documentation synchronization policy
 
 Reference:
 
@@ -40,6 +58,7 @@ Reference:
 - [`governance/L0/ROLLBACK_POLICY.md`](./governance/L0/ROLLBACK_POLICY.md)
 - [`governance/L0/COMMIT_CONVENTION.md`](./governance/L0/COMMIT_CONVENTION.md)
 - [`governance/L0/EXECUTION_RECEIPT_POLICY.md`](./governance/L0/EXECUTION_RECEIPT_POLICY.md)
+- [`governance/L0/DOC_SYNC_POLICY.md`](./governance/L0/DOC_SYNC_POLICY.md)
 
 ### L1: Stable strategy and decision model
 

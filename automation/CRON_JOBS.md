@@ -1,3 +1,6 @@
+<!-- input: 来自上级任务、所属目录 INDEX、相关治理文件 -->
+<!-- output: 产出本文件定义的规则/模板/记录/说明 -->
+<!-- pos: automation/CRON_JOBS.md；若所属文件夹变化请更新我；若文件更新必须同步更新我的开头注释和所属文件夹的MD。 -->
 # CRON_JOBS
 
 以下是社区常用的最小自动化组合：1 个 heartbeat + 2 个 cron。

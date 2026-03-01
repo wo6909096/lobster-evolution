@@ -1,1 +1,4 @@
+# input: 来自上级任务、所属目录 INDEX、相关治理文件
+# output: 产出本文件定义的结构化指标数据
+# pos: metrics/capability_scoreboard.csv；若所属文件夹变化请更新我；若文件更新必须同步更新我的开头注释和所属文件夹的MD。
 date,domain,capability,success_rate,avg_steps,avg_duration_sec,tool_cost,reuse_rate,decision

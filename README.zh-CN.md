@@ -1,8 +1,25 @@
+<!-- input: 来自上级任务、所属目录 INDEX、相关治理文件 -->
+<!-- output: 产出本文件定义的规则/模板/记录/说明 -->
+<!-- pos: README.zh-CN.md；若所属文件夹变化请更新我；若文件更新必须同步更新我的开头注释和所属文件夹的MD。 -->
 # lobster-evolution
 
 面向 OpenClaw Agent 的「执行优先 + 可审计 + 可进化」治理框架。
 
 English version: [README.md](./README.md)
+
+## 文档联动同步契约
+
+本仓库采用“自指 + 多级索引”结构。  
+任何功能、架构、写法更新后，必须同步更新：
+
+1. 文件自身 3 行头注释（`input` / `output` / `pos`）
+2. 文件所属目录的 `INDEX.md`
+3. 必要的父级索引（含根目录 [`INDEX.md`](./INDEX.md)）
+4. 当语义影响全局时，同步更新主文档（至少 [`README.md`](./README.md)）
+
+规则来源：
+
+- [`governance/L0/DOC_SYNC_POLICY.md`](./governance/L0/DOC_SYNC_POLICY.md)
 
 ## 这个仓库解决什么问题
 
@@ -31,6 +48,7 @@ English version: [README.md](./README.md)
 - 回滚策略
 - 提交规范
 - 执行回执策略（反空转）
+- 文档联动同步策略
 
 参考：
 
@@ -40,6 +58,7 @@ English version: [README.md](./README.md)
 - [`governance/L0/ROLLBACK_POLICY.md`](./governance/L0/ROLLBACK_POLICY.md)
 - [`governance/L0/COMMIT_CONVENTION.md`](./governance/L0/COMMIT_CONVENTION.md)
 - [`governance/L0/EXECUTION_RECEIPT_POLICY.md`](./governance/L0/EXECUTION_RECEIPT_POLICY.md)
+- [`governance/L0/DOC_SYNC_POLICY.md`](./governance/L0/DOC_SYNC_POLICY.md)
 
 ### L1：稳定策略层
 

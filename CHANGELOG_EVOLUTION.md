@@ -1,4 +1,13 @@
+<!-- input: 来自上级任务、所属目录 INDEX、相关治理文件 -->
+<!-- output: 产出本文件定义的规则/模板/记录/说明 -->
+<!-- pos: CHANGELOG_EVOLUTION.md；若所属文件夹变化请更新我；若文件更新必须同步更新我的开头注释和所属文件夹的MD。 -->
 # CHANGELOG_EVOLUTION
+
+## v1.3.0 - self-index-hardening
+- 增加根目录与各子目录 `INDEX.md`，形成多级索引导航
+- 为所有 `.md` 与 `.csv` 文件补充 3 行头注释（input/output/pos）
+- 新增 L0 文档联动规则（DOC_SYNC_POLICY）
+- 在中英文 README 中加入“文档联动同步契约”
 
 ## v1.2.0 - readme-expanded
 - 新增详细英文 README（项目目标、分层、接入、自动化、排查）
