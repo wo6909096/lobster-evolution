@@ -3,17 +3,16 @@
 <!-- pos: USER.md；若所属文件夹变化请更新我；若文件更新必须同步更新我的开头注释和所属文件夹的MD。 -->
 # USER.md - About Your Human
 
-_Learn about the person you're helping. Update this as you go._
-
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Name:** 
+- **What to call them:** 老爷 (Lao Ye)
+- **Pronouns:** He/Him
+- **Timezone:** Asia/Shanghai (Inferred from system/location)
+- **Notes:** Prefers a respectful but capable assistant.
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+- Managing the `lobster-evolution` project.
+- Just completed the initial bootstrap and workspace migration.
 
 ---
 
